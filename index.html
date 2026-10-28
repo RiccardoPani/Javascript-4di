@@ -1,1 +1,43 @@
 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I miei file GitHub</title>
+</head>
+<body>
+
+    <h1> I miei file GitHub</h1>
+    <ul id="files"></ul>
+
+    <script>
+        const utente = RiccardoPani;
+        const repo = Javascript-4Di;
+
+        fetch(`https://api.github.com/repos/${utente}/${repo}/contents/`)
+            .then(response => response.json())
+            .then(files => {
+                const lista = document.getElementById("files");
+
+                files.forEach(file => {
+                    const li = document.createElement("li");
+                    const link = document.createElement("a");
+
+                    link.href = file.html_url;
+                    link.textContent = file.name;
+                    link.target = "_blank";
+
+                    li.appendChild(link);
+                    lista.appendChild(li);
+                });
+            })
+            .catch(() => {
+                document.getElementById("files").textContent =
+                    "Errore nel caricamento dei file.";
+            });
+    </script>
+
+</body>
+</html>
+

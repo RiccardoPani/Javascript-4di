@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script> 
+    function scrittura() {
+        let a = document.getElementById('fname').value;
+        let b = document.getElementById('lname').value;
+        
+        document.getElementById('p1').innerHTML = a + " " + b;
+        document.getElementById('p1').style.color = "red";
+    }
+    </script>
+</head>
+
+<body>
+
+<h2>DATI ANAGRAFICI</h2>
+
+<p id="p1"></p>
+
+<label for="fname">Nome:</label><br>
+<input type="text" id="fname" name="fname"><br>
+
+<label for="lname">Cognome:</label><br>
+<input type="text" id="lname" name="lname"><br><br>
+
+<input type="button" value="Inserisci" onclick="scrittura()">
+
+</body>
+</html>

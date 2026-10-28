@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="primo">
+<input type="button" onclick="leggi()">
+<p id="demo"></p>
+<script>
+  function leggi() {
+    let a = parseInt(document.getElementById("primo").value);
+    document.getElementById("demo").innerHTML=a.toString(2);
+  }
+</script>
+</body>
+</html>

@@ -3,229 +3,24 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript 2026–2027</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f5f7;
-            color: #24292f;
-            line-height: 1.5;
-        }
-
-        header {
-            background: #24292f;
-            color: white;
-            padding: 36px 20px;
-        }
-
-        .header-content, main, footer {
-            width: 100%;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        header h1 {
-            margin: 0 0 8px;
-            font-size: 28px;
-            font-weight: 600;
-        }
-
-        header p {
-            margin: 0;
-            color: #c9d1d9;
-        }
-
-        main {
-            padding: 35px 20px 50px;
-        }
-
-        .intro {
-            margin-bottom: 25px;
-        }
-
-        .intro h2 {
-            margin: 0 0 5px;
-            font-size: 21px;
-        }
-
-        .intro p {
-            margin: 0;
-            color: #656d76;
-            font-size: 14px;
-        }
-
-        .file-list {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        .file {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            min-width: 0;
-            padding: 20px;
-            background: white;
-            border: 1px solid #d8dee4;
-            border-radius: 9px;
-            text-decoration: none;
-            color: inherit;
-            transition: border-color 0.15s, box-shadow 0.15s;
-        }
-
-        .file:hover {
-            border-color: #0969da;
-            box-shadow: 0 3px 12px #0000000a;
-        }
-
-        .file-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 43px;
-            height: 43px;
-            flex-shrink: 0;
-            background: #eaf2ff;
-            color: #0969da;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .file-info {
-            min-width: 0;
-        }
-
-        .file-info strong {
-            display: block;
-            font-size: 15px;
-            overflow-wrap: anywhere;
-        }
-
-        .file-info span {
-            display: block;
-            margin-top: 4px;
-            color: #656d76;
-            font-size: 13px;
-        }
-
-        .arrow {
-            margin-left: auto;
-            color: #8c959f;
-            font-size: 20px;
-        }
-
-        footer {
-            padding: 20px;
-            border-top: 1px solid #d8dee4;
-            color: #656d76;
-            font-size: 13px;
-            text-align: center;
-        }
-
-        footer a {
-            color: #0969da;
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                padding: 28px 20px;
-            }
-
-            header h1 {
-                font-size: 23px;
-            }
-
-            main {
-                padding-top: 25px;
-            }
-
-            .file-list {
-                grid-template-columns: 1fr;
-            }
-
-            .file {
-                padding: 16px;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>I miei esercizi JavaScript</title>
 </head>
-
 <body>
 
-    <header>
-        <div class="header-content">
-            <h1>JavaScript 2026–2027</h1>
-            <p>Raccolta di esercizi e progetti</p>
-        </div>
-    </header>
+    <h1>I miei esercizi JavaScript</h1>
 
-    <main>
-        <section class="intro">
-            <h2>Elenco degli esercizi</h2>
-            <p>Seleziona un esercizio per aprire la relativa pagina.</p>
-        </section>
+    <ul>
+        <li><a href="esercizio3.html">Esercizio 3</a></li>
+        <li><a href="esercizio2.html">Esercizio 2</a></li>
+        <li><a href="indirizzoIP.html">Indirizzo IP</a></li>
+    </ul>
 
-        <div class="file-list">
-
-            <a class="file"
-               href="https://riccardopani.github.io/Javascript-4di/Nome%20e%20Cognome.html">
-                <div class="file-icon">JS</div>
-                <div class="file-info">
-                    <strong>Nome e Cognome</strong>
-                    <span>Esercizio HTML</span>
-                </div>
-                <span class="arrow">›</span>
-            </a>
-
-            <a class="file"
-               href="https://riccardopani.github.io/Javascript-4di/Nome%20e%20Cognome%202.html">
-                <div class="file-icon">JS</div>
-                <div class="file-info">
-                    <strong>Nome e Cognome 2</strong>
-                    <span>Esercizio HTML</span>
-                </div>
-                <span class="arrow">›</span>
-            </a>
-
-            <a class="file"
-               href="https://riccardopani.github.io/Javascript-4di/Nome%20e%20Cognome%203.html">
-                <div class="file-icon">JS</div>
-                <div class="file-info">
-                    <strong>Nome e Cognome 3</strong>
-                    <span>Esercizio HTML</span>
-                </div>
-                <span class="arrow">›</span>
-            </a>
-
-            <a class="file"
-               href="https://riccardopani.github.io/Javascript-4di/esJavaScriptBinaria.html">
-                <div class="file-icon">JS</div>
-                <div class="file-info">
-                    <strong>JavaScript Binaria</strong>
-                    <span>Esercizio di programmazione</span>
-                </div>
-                <span class="arrow">›</span>
-            </a>
-
-        </div>
-    </main>
-
-    <footer>
+    <p>
         <a href="https://github.com/RiccardoPani/Javascript-4di">
-            Repository su GitHub
+            La mia repository GitHub
         </a>
-        <p>Progetti JavaScript · Anno scolastico 2026–2027</p>
-    </footer>
+    </p>
 
 </body>
 </html>

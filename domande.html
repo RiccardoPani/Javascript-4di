@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+
+    <h1>Quiz</h1>
+
+    <h2 id="domanda">Quanto fa 2 + 2?</h2>
+
+    <button onclick="rispondi(1)" id="r1">4</button>
+    <button onclick="rispondi(0)" id="r2">5</button>
+
+    <p id="messaggio"></p>
+
+    <script>
+        let numero = 0;
+        let punteggio = 0;
+
+        let domande = [
+            ["gateaway?", "si", "no", 1],
+            ["Qual è la capitale d'Italia?", "Milano", "Roma", 2],
+            ["Quanti giorni ha una settimana?", "7", "10", 1],
+            ["Quanto fa 5 x 5?", "20", "25", 2]
+        ];
+
+        function mostraDomanda() {
+            document.getElementById("domanda").innerHTML =
+                domande[numero][0];
+
+            document.getElementById("r1").innerHTML =
+                domande[numero][1];
+
+            document.getElementById("r2").innerHTML =
+                domande[numero][2];
+
+            document.getElementById("messaggio").innerHTML = "";
+        }
+
+        function rispondi(risposta) {
+            if (risposta == domande[numero][3]) {
+                punteggio++;
+                numero++;
+
+                if (numero < domande.length) {
+                    mostraDomanda();
+                } else {
+                    document.body.innerHTML =
+                        "<h1>Quiz completato!</h1>" +
+                        "<h2>Punteggio: " + punteggio +
+                        "/" + domande.length + "</h2>";
+                }
+            } else {
+                document.getElementById("messaggio").innerHTML =
+                    "Risposta sbagliata! Riprova.";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

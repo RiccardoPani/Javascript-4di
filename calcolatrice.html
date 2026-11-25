@@ -1,19 +1,43 @@
-let n1 = Number(prompt("Inserisci il primo numero:"));
-let operazione = prompt("Inserisci +, -, * oppure /");
-let n2 = Number(prompt("Inserisci il secondo numero:"));
 
-let risultato;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calcolatrice</title>
+</head>
+<body>
 
-if (operazione === "+") {
-    risultato = n1 + n2;
-} else if (operazione === "-") {
-    risultato = n1 - n2;
-} else if (operazione === "*") {
-    risultato = n1 * n2;
-} else if (operazione === "/") {
-    risultato = n1 / n2;
-} else {
-    risultato = "Operazione non valida";
-}
+    <h2>Calcolatrice</h2>
 
-alert("Il risultato è: " + risultato);
+    <input type="number" id="n1" placeholder="Primo numero">
+
+    <select id="operazione">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <input type="number" id="n2" placeholder="Secondo numero">
+
+    <button onclick="calcola()">Calcola</button>
+
+    <p id="risultato"></p>
+
+    <script>
+        function calcola() {
+            let a = Number(document.getElementById("n1").value);
+            let b = Number(document.getElementById("n2").value);
+            let op = document.getElementById("operazione").value;
+            let r;
+
+            if (op == "+") r = a + b;
+            if (op == "-") r = a - b;
+            if (op == "*") r = a * b;
+            if (op == "/") r = a / b;
+
+            document.getElementById("risultato").innerHTML = "Risultato: " + r;
+        }
+    </script>
+
+</body>
+</html>
